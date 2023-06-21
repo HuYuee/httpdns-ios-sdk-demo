@@ -55,7 +55,8 @@
 		5F85CB9928B3A37B003D20D1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */; };
 		5F85CB9A28B3A38B003D20D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A8B1B48E8A800812340 /* Security.framework */; };
 		5F85CB9B28B3A393003D20D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A8B1B48E8A800812340 /* Security.framework */; };
-		5FCBCDFE2A162B0C00A73931 /* MSDKDns_C11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCBCDFD2A162B0C00A73931 /* MSDKDns_C11.framework */; };
+		5FF40A102A3C3494003E3CA8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF40A0F2A3C3494003E3CA8 /* AVFoundation.framework */; };
+		5FF40A142A41BE4E003E3CA8 /* MSDKDns_C11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF40A132A41BE4E003E3CA8 /* MSDKDns_C11.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +140,8 @@
 		5F5DAF5428A602AD00BF5B79 /* testConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testConfig.h; sourceTree = "<group>"; };
 		5F85CB9228B3A2A4003D20D1 /* HttpDnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpDnsViewController.m; sourceTree = "<group>"; };
 		5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		5FCBCDFD2A162B0C00A73931 /* MSDKDns_C11.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSDKDns_C11.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/sdkWorkspace-fzwspzfjxkyulaczlxnxaymfxjfm/Build/Products/Debug-iphonesimulator/MSDKDns_C11.framework"; sourceTree = "<group>"; };
+		5FF40A0F2A3C3494003E3CA8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5FF40A132A41BE4E003E3CA8 /* MSDKDns_C11.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSDKDns_C11.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/sdkWorkspace-fzwspzfjxkyulaczlxnxaymfxjfm/Build/Products/Debug-iphonesimulator/MSDKDns_C11.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF40A102A3C3494003E3CA8 /* AVFoundation.framework in Frameworks */,
 				5F1332EB28FFECED00A22D2A /* libsqlite3.tbd in Frameworks */,
 				5F85CB9A28B3A38B003D20D1 /* Security.framework in Frameworks */,
 				4426DD6D1C2942B6007D0A9E /* libc++.tbd in Frameworks */,
@@ -166,7 +169,7 @@
 				5F85CB9B28B3A393003D20D1 /* Security.framework in Frameworks */,
 				44F12A771B48E7BF00812340 /* CoreGraphics.framework in Frameworks */,
 				44F12A751B48E7B600812340 /* Foundation.framework in Frameworks */,
-				5FCBCDFE2A162B0C00A73931 /* MSDKDns_C11.framework in Frameworks */,
+				5FF40A142A41BE4E003E3CA8 /* MSDKDns_C11.framework in Frameworks */,
 				5F85CB9928B3A37B003D20D1 /* CoreFoundation.framework in Frameworks */,
 				44F12A731B48E7B000812340 /* UIKit.framework in Frameworks */,
 				44F12A711B48E7AB00812340 /* SystemConfiguration.framework in Frameworks */,
@@ -187,8 +190,9 @@
 		2F3B2A7125F21C28004A70B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FF40A0F2A3C3494003E3CA8 /* AVFoundation.framework */,
 				5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */,
-				5FCBCDFD2A162B0C00A73931 /* MSDKDns_C11.framework */,
+				5FF40A132A41BE4E003E3CA8 /* MSDKDns_C11.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
