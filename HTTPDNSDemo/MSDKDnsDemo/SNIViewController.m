@@ -5,6 +5,7 @@
 #import "SNIViewController.h"
 #import <MSDKDns_C11/MSDKDns.h>
 #import <MSDKDns_C11/MSDKDnsHttpMessageTools.h>
+#import <AFNetworking/AFNetworking.h>
 
 #define SCREEN_WIDTH  ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -31,7 +32,7 @@
     DnsConfig config = {
         .dnsId = dns授权id,
         .dnsKey = @"DesKey加密密钥",
-        .encryptType = HttpDnsEncryptTypeDES,
+          .encryptType = HttpDnsEncryptTypeDES,
     };
     [[MSDKDns sharedInstance] initConfig: &config];
 }
@@ -39,6 +40,27 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)usingAFNetworking:(id)sender {
+    _logView.text = nil;
+    // 需要设置SNI的URL
+    NSString *originalUrl = @"https://www.qq.com/";    
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSArray *protocolArray = @[[MSDKDnsHttpMessageTools class]];
+    config.protocolClasses = protocolArray;
+    AFHTTPSessionManager* sessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
+    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSURLSessionDataTask* task = [sessionManager GET:originalUrl parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"request complete ==== response: %@ ===== error: nil", responseString);
+       _logView.text = responseString; // 将响应字符串显示在_logView中
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"request complete ==== response: nil ===== error: %@", error);
+       _logView.text = [error localizedDescription];  // 将错误信息显示在_logView中
+    }];
+    [task resume];
+
 }
 
 - (IBAction)usingConnection:(id)sender {
@@ -64,7 +86,7 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     self.task = [session dataTaskWithRequest:request];
     [self.task resume];
-
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
