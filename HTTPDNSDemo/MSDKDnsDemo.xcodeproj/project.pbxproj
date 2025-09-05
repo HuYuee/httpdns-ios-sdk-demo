@@ -57,6 +57,10 @@
 		5F85CB9928B3A37B003D20D1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */; };
 		5F85CB9A28B3A38B003D20D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A8B1B48E8A800812340 /* Security.framework */; };
 		5F85CB9B28B3A393003D20D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F12A8B1B48E8A800812340 /* Security.framework */; };
+		86795F8E2D54B08700CFEC0B /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 86795F8D2D54B08700CFEC0B /* AFNetworking */; };
+		86795F902D54B0A800CFEC0B /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 86795F8F2D54B0A800CFEC0B /* AFNetworking */; };
+		86795F932D54B10600CFEC0B /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 86795F922D54B10600CFEC0B /* AFNetworking */; };
+		86795FAF2D54B1C200CFEC0B /* AFNetworking iOS Tests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 86795FAE2D54B1C200CFEC0B /* AFNetworking iOS Tests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FDE19A42CD8A8AE00785816 /* MSDKDns_C11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDE19A32CD8A8AE00785816 /* MSDKDns_C11.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +98,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				86795FAF2D54B1C200CFEC0B /* AFNetworking iOS Tests.xctest in Embed PlugIns */,
 			);
 			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +149,7 @@
 		5F5DAF5428A602AD00BF5B79 /* testConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testConfig.h; sourceTree = "<group>"; };
 		5F85CB9228B3A2A4003D20D1 /* HttpDnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpDnsViewController.m; sourceTree = "<group>"; };
 		5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		86795FAE2D54B1C200CFEC0B /* AFNetworking iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = "AFNetworking iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDE19A32CD8A8AE00785816 /* MSDKDns_C11.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSDKDns_C11.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/sdkWorkspace-fzwspzfjxkyulaczlxnxaymfxjfm/Build/Products/Debug-iphoneos/MSDKDns_C11.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,18 +166,21 @@
 				4426DD571C29407B007D0A9E /* libz.1.1.3.tbd in Frameworks */,
 				4426DD531C29406A007D0A9E /* libz.tbd in Frameworks */,
 				44F12A8C1B48E8A800812340 /* Security.framework in Frameworks */,
+				86795F902D54B0A800CFEC0B /* AFNetworking in Frameworks */,
 				44F12A8A1B48E88500812340 /* CoreLocation.framework in Frameworks */,
 				44F12A871B48E7FE00812340 /* AdSupport.framework in Frameworks */,
 				44F12A851B48E7F300812340 /* QuartzCore.framework in Frameworks */,
 				44F12A831B48E7EC00812340 /* CoreText.framework in Frameworks */,
 				44F12A811B48E7E500812340 /* ImageIO.framework in Frameworks */,
 				44F12A7F1B48E7DE00812340 /* CoreData.framework in Frameworks */,
+				86795F8E2D54B08700CFEC0B /* AFNetworking in Frameworks */,
 				44F12A7D1B48E7D700812340 /* CFNetwork.framework in Frameworks */,
 				5F85CB9728B3A368003D20D1 /* libz.tbd in Frameworks */,
 				44F12A791B48E7C600812340 /* MobileCoreServices.framework in Frameworks */,
 				5F85CB9B28B3A393003D20D1 /* Security.framework in Frameworks */,
 				44F12A771B48E7BF00812340 /* CoreGraphics.framework in Frameworks */,
 				44F12A751B48E7B600812340 /* Foundation.framework in Frameworks */,
+				86795F932D54B10600CFEC0B /* AFNetworking in Frameworks */,
 				5FDE19A42CD8A8AE00785816 /* MSDKDns_C11.framework in Frameworks */,
 				5F85CB9928B3A37B003D20D1 /* CoreFoundation.framework in Frameworks */,
 				44F12A731B48E7B000812340 /* UIKit.framework in Frameworks */,
@@ -193,6 +202,7 @@
 		2F3B2A7125F21C28004A70B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86795FAE2D54B1C200CFEC0B /* AFNetworking iOS Tests.xctest */,
 				5F2B79B22B95A9EA00C4A4D3 /* WebKit.framework */,
 				5FDE19A32CD8A8AE00785816 /* MSDKDns_C11.framework */,
 				5F85CB9828B3A37B003D20D1 /* CoreFoundation.framework */,
@@ -369,6 +379,9 @@
 				Base,
 			);
 			mainGroup = 44F12A2B1B48E52A00812340;
+			packageReferences = (
+				86795F882D54A04400CFEC0B /* XCRemoteSwiftPackageReference "AFNetworking" */,
+			);
 			productRefGroup = 44F12A351B48E52A00812340 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -832,6 +845,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86795F882D54A04400CFEC0B /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86795F8D2D54B08700CFEC0B /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86795F882D54A04400CFEC0B /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+		86795F8F2D54B0A800CFEC0B /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86795F882D54A04400CFEC0B /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+		86795F922D54B10600CFEC0B /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86795F882D54A04400CFEC0B /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44F12A2C1B48E52A00812340 /* Project object */;
 }
